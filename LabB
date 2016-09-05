@@ -1,0 +1,49 @@
+//Lab B
+//A program that translates dollars to distance and into number of trips
+//Soroush Sanaat
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+
+const double DOLLAR_BILL_THICKNESS_INCHES = 0.0043;
+
+
+int main() {
+	
+	
+	// These are the variables I am declaring for use in later calculations
+	double Distance;
+	double Debt;
+	double TRIPS;
+	double DOLLAR_MILES;
+	double DOLLAR_FEET;
+	double DOLLAR_INCHES;
+	
+	
+	// This will be used to receive user input for use in the following calculations
+	cout << "Enter distance (miles): ";
+	cin >> Distance;
+	cout << "Enter debt ($): ";
+	cin >> Debt;
+	
+	
+	
+	// These are the actual calculations
+	DOLLAR_INCHES = Debt * DOLLAR_BILL_THICKNESS_INCHES;
+	DOLLAR_FEET = DOLLAR_INCHES / 12.0;
+	DOLLAR_MILES = DOLLAR_FEET / 5280.0;
+	TRIPS = DOLLAR_MILES / Distance;
+
+
+	//This is used to properly format the output of information according to the lab assignment requirements
+	cout << "For a debt of $" << right << setw(15) << setprecision(2) << fixed << Debt << endl;
+	cout << "and a distance of " << right << setw(25) << setprecision(4) << fixed << Distance << " miles" << endl;
+	cout << "You can make " << left << setw(5) << setprecision(0) << fixed << TRIPS << " trips." << endl;
+
+
+	return 0;
+}
