@@ -1,0 +1,45 @@
+#include <iostream>
+#include <iomanip>
+
+
+using namespace std;
+
+int main()
+{
+
+double cost;
+double money;
+
+
+	do{
+	cout << "Enter cost $" << endl;
+	cin >> cost;
+	cost++;
+	
+	}while(cost >= 100000.00);
+
+	do{
+	cout << "Enter money $" << endl;
+	cin >> money;
+	money++;
+	
+	}while(money <= 0.00);
+	
+	cout << endl;
+	
+	cout << "change = $" << fixed << setprecision(2) << money-cost << endl;
+	
+	if(money-cost < 0.00) {
+		cout << "Customer did not give you enough money.";
+	}
+	
+	if(money-cost == 0.00) {
+		cout << "Customer paid exact change.";
+	}
+	
+	if(money-cost > 0.00) {
+		cout << fixed << setprecision(2) << "Give the customer $" << money-cost << endl;
+	}
+	
+	return 0;
+}
