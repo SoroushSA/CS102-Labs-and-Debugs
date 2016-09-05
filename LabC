@@ -12,14 +12,14 @@ double money;
 
 
 	do{
-	cout << "Enter cost $" << endl;
+	cout << "Enter cost $";
 	cin >> cost;
 	cost++;
 	
 	}while(cost >= 100000.00);
 
 	do{
-	cout << "Enter money $" << endl;
+	cout << "Enter money $";
 	cin >> money;
 	money++;
 	
@@ -27,7 +27,6 @@ double money;
 	
 	cout << endl;
 	
-	cout << "change = $" << fixed << setprecision(2) << money-cost << endl;
 	
 	if(money-cost < 0.00) {
 		cout << "Customer did not give you enough money.";
@@ -38,7 +37,7 @@ double money;
 	}
 	
 	if(money-cost > 0.00) {
-		cout << fixed << setprecision(2) << "Give the customer $" << money-cost << endl;
+		cout << fixed << setprecision(2) << "Give the customer $" << money-cost << "." << endl;
 	}
 	
 	return 0;
